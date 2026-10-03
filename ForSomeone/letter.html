@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Joe</title>
+<style>
+/* =========================
+   BASIC PAGE
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 45px 18px;
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 224, 116, 0.28),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 177, 205, 0.28),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 85%,
+            rgba(255, 221, 111, 0.18),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #fffdfb,
+            #fff3f7,
+            #fffaf0
+        );
+    color: #5c4b52;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+/* =========================
+   FLOATING GOLDEN LIGHTS
+   ========================= */
+.sparkle {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #f3d66f;
+    opacity: 0.45;
+    pointer-events: none;
+    animation: floatingLight 6s ease-in-out infinite;
+}
+.sparkle.one {
+    top: 12%;
+    left: 13%;
+    animation-delay: 0s;
+}
+.sparkle.two {
+    top: 24%;
+    right: 14%;
+    animation-delay: 1.5s;
+}
+.sparkle.three {
+    top: 58%;
+    left: 8%;
+    animation-delay: 3s;
+}
+.sparkle.four {
+    top: 74%;
+    right: 11%;
+    animation-delay: 2s;
+}
+.sparkle.five {
+    top: 42%;
+    right: 7%;
+    animation-delay: 4s;
+}
+.sparkle.six {
+    top: 88%;
+    left: 18%;
+    animation-delay: 1s;
+}
+@keyframes floatingLight {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateY(-12px);
+        opacity: 0.7;
+    }
+}
+/* =========================
+   THE LETTER
+   ========================= */
+.letter {
+    max-width: 700px;
+    margin: auto;
+    padding: 48px 42px 55px;
+    background: rgba(255, 255, 255, 0.80);
+    border: 1px solid rgba(232, 157, 181, 0.35);
+    border-radius: 26px;
+    box-shadow:
+        0 18px 50px rgba(205, 137, 160, 0.13),
+        0 0 30px rgba(255, 218, 120, 0.08);
+    animation:
+        letterAppear 2.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(18px);
+}
+/* =========================
+   LETTER APPEARANCE
+   ========================= */
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   OPENING
+   ========================= */
+h1 {
+    margin: 0;
+    color: #d27f9d;
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+    font-size: 46px;
+    font-weight: normal;
+    animation:
+        softText 1.5s ease-out 0.4s both;
+}
+h2 {
+    margin-top: 4px;
+    margin-bottom: 42px;
+    color: #cba43b;
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+    font-size: 30px;
+    font-weight: normal;
+    animation:
+        softText 1.5s ease-out 0.7s both;
+}
+/* =========================
+   LETTER PARAGRAPHS
+   ========================= */
+p {
+    margin: 0 0 27px;
+    font-size: 20px;
+    line-height: 1.75;
+    letter-spacing: 0.15px;
+    opacity: 0;
+    animation:
+        paragraphAppear 1.4s ease-out forwards;
+}
+/* Paragraph timing */
+p:nth-of-type(1) {
+    animation-delay: 1.0s;
+}
+p:nth-of-type(2) {
+    animation-delay: 1.15s;
+}
+p:nth-of-type(3) {
+    animation-delay: 1.30s;
+}
+p:nth-of-type(4) {
+    animation-delay: 1.45s;
+}
+p:nth-of-type(5) {
+    animation-delay: 1.60s;
+}
+p:nth-of-type(6) {
+    animation-delay: 1.75s;
+}
+p:nth-of-type(7) {
+    animation-delay: 1.90s;
+}
+p:nth-of-type(8) {
+    animation-delay: 2.05s;
+}
+p:nth-of-type(9) {
+    animation-delay: 2.20s;
+}
+p:nth-of-type(10) {
+    animation-delay: 2.35s;
+}
+p:nth-of-type(11) {
+    animation-delay: 2.50s;
+}
+p:nth-of-type(12) {
+    animation-delay: 2.65s;
+}
+p:nth-of-type(13) {
+    animation-delay: 2.80s;
+}
+@keyframes paragraphAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes softText {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   SPECIAL WORDING
+   ========================= */
+p:nth-of-type(7) {
+    color: #c87997;
+}
+p:nth-of-type(10) {
+    color: #b99435;
+    font-style: italic;
+}
+/* =========================
+   ENDING
+   ========================= */
+.signature {
+    margin-top: 45px;
+    text-align: right;
+    color: #cf7f9d;
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+    font-size: 34px;
+    opacity: 0;
+    animation:
+        signatureAppear 1.8s ease-out 3.2s forwards;
+}
+@keyframes signatureAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   THE STRANGE LITTLE HEART
+   ========================= */
+.heart {
+    margin-top: 18px;
+    text-align: center;
+    height: 65px;
+    opacity: 0;
+    animation:
+        heartAppear 1.8s ease-out 3.8s forwards;
+}
+.heart span {
+    display: inline-block;
+    color: #df9ab2;
+    font-size: 48px;
+    transform: rotate(-10deg);
+    text-shadow:
+        0 0 8px rgba(238, 151, 180, 0.35),
+        0 0 18px rgba(255, 220, 120, 0.25);
+    animation:
+        gentleHeart 4s ease-in-out 5s infinite;
+}
+@keyframes heartAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes gentleHeart {
+    0%, 100% {
+        transform:
+            rotate(-10deg)
+            translateY(0);
+    }
+    50% {
+        transform:
+            rotate(-4deg)
+            translateY(-5px);
+    }
+}
+/* =========================
+   PHONE VERSION
+   ========================= */
+@media (max-width: 600px) {
+    body {
+        padding:
+            25px
+            12px;
+    }
+    .letter {
+        padding:
+            35px
+            24px
+            45px;
+        border-radius: 21px;
+    }
+    h1 {
+        font-size: 39px;
+    }
+    h2 {
+        font-size: 27px;
+        margin-bottom: 35px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+    .signature {
+        font-size: 30px;
+    }
+    .heart span {
+        font-size: 44px;
+    }
+}
+</style>
+</head>
+<body>
+<!-- Soft floating lights -->
+<div class="sparkle one"></div>
+<div class="sparkle two"></div>
+<div class="sparkle three"></div>
+<div class="sparkle four"></div>
+<div class="sparkle five"></div>
+<div class="sparkle six"></div>
+<!-- THE LETTER -->
+<div class="letter">
+<h1>Hey joe</h1>
+<h2>Happy birthday</h2>
+<p>
+I prepared a lot for this day<br>
+None of the plans worked out<br>
+But turns out it doesn’t need to be perfect for it to be meaningful
+</p>
+<p>
+So here’s the most unpolished version of what i want you to know
+</p>
+<p>
+You can’t imagine how your presence in this chapter of my life made a difference
+</p>
+<p>
+Now i feel warm often<br>
+Now i can talk often<br>
+Now i can feel a little bit more than usual
+</p>
+<p>
+Only if you knew how my eyes sees you<br>
+Or how my heart experiences you<br>
+How my smile shines while talking to you
+</p>
+<p>
+I somehow managed to memorize every little detail about you<br>
+Even if sometimes i don’t have words to answer
+</p>
+<p>
+The way you love animals fiercely<br>
+The way you are hopelessly dramatic sometimes<br>
+The way i remember you everytime i see bugs<br>
+Or hear your name or anything related to you
+</p>
+<p>
+Only if you know how amazing you are<br>
+How adorable how wonderful how beautiful how much of a goddess you are,
+you’ll never settle for anything less than what you deserve
+</p>
+<p>
+And i wish you the best<br>
+Not in the normal boring way
+</p>
+<p>
+I wish you THE best that you want
+</p>
+<p>
+And i wish this year would end quickly just so you can get past 20
+</p>
+<p>
+I want you to have the kind of life you dream of<br>
+I wanna see you succeed, happy and healthy<br>
+And i know you’ll do well
+</p>
+<p>
+You have a soft heart of an old soul<br>
+And yes you are magical
+</p>
+<p>
+I don’t need an ending for this letter<br>
+I hate endings and i don’t want our little coincidence to have an end
+</p>
+<div class="signature">
+But Sincerely, Heba.
+</div>
+<div class="heart">
+<span>♡</span>
+</div>
+</div>
+</body>
+</html>
